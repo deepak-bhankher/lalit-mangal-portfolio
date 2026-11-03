@@ -1491,9 +1491,21 @@ dialog[open] {
    ========================================================================== */
 @media (max-width: 1024px) {
   .hero-container {
-    grid-template-columns: 1fr;
-    gap: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     text-align: center;
+  }
+
+  .hero-visual {
+    order: -1; /* Shows photo first at the top on mobile and tablet */
+    margin: 0 auto 5px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-content {
+    order: 1; /* Content appears below the photo */
   }
 
   .hero-badge,
